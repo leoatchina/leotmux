@@ -8,15 +8,16 @@ tmux 3.0+,  之前作了很多兼容性配置，非常吃力不讨好，因此�
  ln -s leotmux/.tmux.conf ~/.tmux.conf
 ```
 ## 基本操作
-- 先导键是Alt-b
-  - 按下Alt-b后
-  - hjkl 调整大小
+- Alt+] 左右分割panel， Alt+[ 上下分割panel
+- 先导键是Alt-b, 按下Alt-b后
+  - hjkl 调整panel大小
   - Alt+hjkl panel 也是调整大小，幅度不一样
-- Alt+n/p 翻页
-- Alt+Shift+n/p 移动页面
-- Alt+\插入新tab
-- Alt+Shift+\ close当前tab
-- Alt+] 左右分割， Alt+[ 上下分割
+  - Alt+s rename session
+  - Alt+w rename window
+- Alt+n/p 翻页window
+- Alt+Shift+n/p 移动window
+- Alt+\插入新window
+- Alt+Shift+\ close当前window
 - Alt+Shift+hjkl panel 跳转，甚至可以跳到vim里去
 ## 高级操作部分
 - Alt+Shift+b 显示buffer
