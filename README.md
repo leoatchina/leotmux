@@ -5,7 +5,7 @@ tmux 3.0+,  之前作了很多兼容性配置，非常吃力不讨好，因此�
 
 ## 安装
 ```
- ln -s leotmux/.tmux.conf ~/.tmux.conf
+ ln -sf tmux.conf ~/.tmux.conf
 ```
 ## 基本操作
 - Alt+] 左右分割panel， Alt+[ 上下分割panel
