@@ -6,11 +6,10 @@ tmux 3.0+，之前作了很多兼容性配置，非常吃力不讨好，因此�
 
 ## 安装
 ```bash
-ln -sf tmux.conf ~/.tmux.conf
+ln -sf /path/to/leotmux/tmux.conf ~/.tmux.conf
 ```
 
 ## 基本说明
-- `M` 是指 `Alt` 键，格式为 `<Alt-x>`
 - 前导键为 `<Alt-o>`
 - 注意大小写区分, `<Alt-o>` 和 `<Alt-O>` 是不一样的
 - `bind` 后面有 `-n` 是直接映射，不需要再按前导键
@@ -18,8 +17,8 @@ ln -sf tmux.conf ~/.tmux.conf
 ## 常用操作
 
 ### 分割面板
-- `<Alt-]>` 水平分割
-- `<Alt-[>` 垂直分割
+- `<Alt-]>` 左右分割
+- `<Alt-[>` 上下分割
 
 ### 新建窗口
 - `<Alt-O>` 新建窗口
@@ -30,10 +29,14 @@ ln -sf tmux.conf ~/.tmux.conf
     - 一个窗口里有很多面板
 
 ### 跳转面板
-- `<Alt-H>` 左
-- `<Alt-J>` 下
-- `<Alt-K>` 上
-- `<Alt-L>` 右
+- `<Alt-H>` 左(要检查vim)
+- `<Alt-J>` 下(要检查vim)
+- `<Alt-K>` 上(要检查vim)
+- `<Alt-L>` 右(要检查vim)
+- `<Shift-Left>`  左
+- `<Shift-Down>`  下
+- `<Shift-Up>`    上
+- `<Shift-Right>` 右
 
 ### 切换窗口
 - `<Alt-P>` 上一个窗口
@@ -49,10 +52,6 @@ ln -sf tmux.conf ~/.tmux.conf
 
 ## 其他操作
 
-### 交换窗口位置并切换
-- `<Shift-Left>` 与左边窗口交换位置并切换到左边窗口
-- `<Shift-Right>` 与右边窗口交换位置并切换到右边窗口
-
 ### 移动窗口到指定位置
 - `<Alt-o> <Alt-p>` 移动到左边
 - `<Alt-o> <Alt-n>` 移动到右边
@@ -64,13 +63,19 @@ ln -sf tmux.conf ~/.tmux.conf
 - `<Alt-o> [` 与上面面板交换
 - `<Alt-o> ]` 与下面面板交换
 
+### 重命名
+- `<Alt-o> <Alt-s>` 重命名会话
+- `<Alt-o> <Alt-r>` 重命名窗口
+
 ### 复制模式
 - `<Alt-|>` 进入复制模式
 - 复制模式下按 `v` 开始选择，`y` 复制，`<Enter>` 复制到系统剪贴板
 
-### 重命名
-- `<Alt-o> <Alt-s>` 重命名会话
-- `<Alt-o> <Alt-r>` 重命名窗口
+### 配置重载
+- `<Alt-o><Enter>` 重新加载配置文件
+
+### fzf 集成 
+- `<Alt-o><Alt-o>` 使用 fzf-tmux 选择窗口(要安装fzf 和 fzf-tmux) 
 
 ### 会话管理
 - `tmux` 新建会话
@@ -79,5 +84,3 @@ ln -sf tmux.conf ~/.tmux.conf
 - `tmux detach` 或 `<Alt-o>d` 分离当前会话
 - `<Alt-o> <Alt-o>` 选择面板（需安装 tmux-fzf）
 
-### 配置重载
-- `<Alt-o><Enter>` 重新加载配置文件
