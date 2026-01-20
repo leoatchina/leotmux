@@ -1,8 +1,7 @@
 # leoatchina's tmux config
 
 ## 版本要求
-tmux 3.0+，之前作了很多兼容性配置，非常吃力不讨好，因此就把版本要求提高，低版本tmux直接退出。
-可以通过 `conda install -c conda-forge tmux` 安装
+tmux 3.0+，可以通过 `conda install -c conda-forge tmux` 安装
 
 ## 安装
 ```bash
@@ -12,7 +11,7 @@ ln -sf /path/to/leotmux/tmux.conf ~/.tmux.conf
 ## 基本说明
 - 前导键为 `<Alt-o>`
 - 注意大小写区分, `<Alt-o>` 和 `<Alt-O>` 是不一样的
-- `bind` 后面有 `-n` 是直接映射，不需要再按前导键
+- 配置里，`bind` 后面有 `-n` 是直接映射，不需要再按前导键
 
 ## 常用操作
 
@@ -27,12 +26,13 @@ ln -sf /path/to/leotmux/tmux.conf ~/.tmux.conf
 - `<Alt-\>` 关闭当前面板
 - `<Alt-o> <Alt-q>` 关闭当前窗口
     - 一个窗口里有很多面板
+    - 演示里的`左右`、`上下`分的就是面板
 
 ### 跳转面板
-- `<Alt-H>` 左(要检查vim)
-- `<Alt-J>` 下(要检查vim)
-- `<Alt-K>` 上(要检查vim)
-- `<Alt-L>` 右(要检查vim)
+- `<Alt-H>` 左(检查vim)
+- `<Alt-J>` 下(检查vim)
+- `<Alt-K>` 上(检查vim)
+- `<Alt-L>` 右(检查vim)
 - `<Shift-Left>`  左
 - `<Shift-Down>`  下
 - `<Shift-Up>`    上
@@ -42,9 +42,11 @@ ln -sf /path/to/leotmux/tmux.conf ~/.tmux.conf
 - `<Alt-P>` 上一个窗口
 - `<Alt-N>` 下一个窗口
 - `<Alt-o> <Alt-w>` 切换到最后一个窗口
-- `<Alt-o> <Tab>` 选择面板
+- `<Alt-o> <Tab>` 选择面板(原生)
+- `<Alt-o><Alt-o>` 使用 `tmux-fzf` 选择窗口(要安装fzf 和 tmux-fzf) 
 
 ### 调整面板大小
+- **也可用鼠标**
 - `<Alt-o> <Alt-h>` 向左调整
 - `<Alt-o> <Alt-j>` 向下调整
 - `<Alt-o> <Alt-k>` 向上调整
@@ -74,8 +76,6 @@ ln -sf /path/to/leotmux/tmux.conf ~/.tmux.conf
 ### 配置重载
 - `<Alt-o><Enter>` 重新加载配置文件
 
-### fzf 集成 
-- `<Alt-o><Alt-o>` 使用 fzf-tmux 选择窗口(要安装fzf 和 fzf-tmux) 
 
 ### 会话管理
 - `tmux` 新建会话
